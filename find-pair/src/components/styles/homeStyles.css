@@ -1,0 +1,432 @@
+* {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+#container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #c8d6e5;
+}
+
+#lottie {
+  margin: calc(20vh / 4) 0 calc(20vh / 4) 0;
+}
+
+.brandLogo {
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 0.3s forwards;
+}
+
+.logo {
+  font-size: 50px;
+  transition: all ease-in 0.5s;
+  float: left;
+}
+
+.menuIconContainer {
+  overflow: hidden;
+  opacity: 0;
+  height: 30px;
+  width: 60px;
+  z-index: 1000;
+  right: 5px;
+  top: 15px;
+  position: absolute;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 0.3s forwards;
+}
+
+/* .menuContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d35400;
+  z-index: 100000;
+} */
+
+.brandLogo:hover .logo {
+  color: #c8d6e5;
+  text-shadow: 1px 1px #2f3640;
+  transform: translateY(1px);
+}
+
+.logoText {
+  bottom: 10px;
+  font-size: 25px;
+  float: left;
+  line-height: 50px;
+  margin: 0 0 0 10px;
+  transition: all ease-in 0.5s;
+}
+
+.brandLogo:hover .logoText {
+  color: #c8d6e5;
+  text-shadow: 1px 1px #2f3640;
+  transform: translateY(1px);
+}
+
+.menuIconContainer:hover {
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 100% !important;
+}
+
+.form {
+  margin-top: calc(15vh / 5.5);
+}
+
+.quoteContainer {
+  margin: 15px 0;
+  opacity: 0;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 1.8s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: calc(20vh / 5) 0 0; */
+}
+
+.quote {
+  font-size: calc(((100vw / 3) / 3) / 5);
+}
+
+/* .quote small {
+  background-color: #2f3640;
+  color: #c8d6e5;
+  padding: 1px;
+} */
+
+.textBoxContainer {
+  margin: 15px 0;
+  opacity: 0;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 2s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameTextBoxText {
+  color: #c8d6e5;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-align: center;
+  line-height: calc(20vh / 4);
+  width: 100px;
+  background-color: #192a56;
+  float: left;
+  font-weight: normal;
+  font-size: calc(((100vw / 3) / 3) / 7);
+  height: calc(20vh / 4);
+  width: calc((100vw / 3) / 3);
+  z-index: 1000;
+}
+
+.nameTextbox {
+  font-weight: normal;
+  color: black;
+  font-size: calc(((100vw / 3) / 3) / 7);
+  background-color: #273c75;
+  outline: none;
+  padding-left: 8px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 0;
+  height: calc(20vh / 4);
+  width: calc(100vw / 2.5);
+  transition: all 0.5s;
+  line-height: calc(20vh / 4);
+  z-index: 1000;
+}
+
+.nameTextbox::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.nameTextbox:focus {
+  background-color: #00b894;
+}
+
+.playButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playMusicButton {
+  background-color: #00745c;
+}
+
+.GameButtons {
+  opacity: 0;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 2.2s forwards;
+  margin: 10px;
+  border: 0;
+  background-color: #2f3640;
+  color: #c8d6e5;
+  height: calc(20vh / 4);
+  border-radius: 4px;
+  font-size: calc(((100vw / 3) / 3) / 7);
+  width: calc((100vw / 3) / 3);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+
+.GameButtons:focus {
+  outline: none;
+}
+
+.GameButtons:hover {
+  background-color: #d35400;
+}
+
+#canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.selectDifficultyOptions {
+  background-color: #d35400;
+  height: calc(20vh / 4);
+  border-radius: 4px;
+  width: 30px;
+  font-size: calc(((100vw / 3) / 3) / 7);
+  width: calc((100vw / 3) / 3);
+  opacity: 0;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 2.2s forwards;
+  margin: 10px;
+  border: 0;
+  background-color: #2f3640;
+  color: #c8d6e5;
+  text-align: center;
+  padding-left: 7px;
+  transition: all 0.5s;
+}
+
+.selectDifficultyOptions:hover {
+  background-color: #d35400;
+  cursor: pointer;
+}
+
+.selectDifficultyOptions option {
+  transition: all 0.5s;
+  color: #c8d6e5;
+  background-color: #192a56;
+  padding: 50px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nameTextBoxText {
+    font-size: calc(((100vw / 3) / 3) / 6);
+    width: calc((100vw / 3) / 2.8);
+  }
+  .nameTextbox {
+    font-size: calc(((100vw / 3) / 3) / 6);
+    width: calc(100vw / 2);
+  }
+  .GameButtons {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 6);
+  }
+
+  .selectDifficultyOptions {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 6);
+  }
+  .quote {
+    font-size: calc(((100vw / 3) / 3) / 5);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nameTextBoxText {
+    font-size: calc(((100vw / 3) / 3) / 6);
+  }
+  .nameTextbox {
+    font-size: calc(((100vw / 3) / 3) / 6);
+  }
+  .GameButtons {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 5.5);
+  }
+  .selectDifficultyOptions {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 5.5);
+  }
+  .quote {
+    font-size: calc(((100vw / 3) / 3) / 5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nameTextBoxText {
+    font-size: calc(((100vw / 3) / 3) / 5);
+    width: calc((100vw / 3) / 2.3);
+  }
+  .nameTextbox {
+    font-size: calc(((100vw / 3) / 3) / 5);
+    width: calc(100vw / 1.5);
+  }
+  .GameButtons {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 5);
+  }
+  .selectDifficultyOptions {
+    width: calc((100vw / 3) / 2);
+    font-size: calc(((100vw / 3) / 3) / 5);
+  }
+  .quote {
+    font-size: calc(((100vw / 3) / 3) / 4);
+  }
+  #lottie {
+    margin: calc(20vh / 2) 0 calc(20vh / 4) 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nameTextBoxText {
+    font-size: calc(((100vw / 3) / 3) / 4);
+    width: calc((100vw / 3) / 2);
+  }
+  .nameTextbox {
+    font-size: calc(((100vw / 3) / 3) / 4);
+    width: calc(100vw / 1.5);
+  }
+  .GameButtons {
+    width: calc((100vw / 3) / 1.5);
+    font-size: calc(((100vw / 3) / 3) / 3);
+    display: block;
+    margin: 20px auto 20px;
+    width: 100%;
+  }
+
+  .selectDifficultyOptions {
+    width: calc((100vw / 3) / 1.5);
+    font-size: calc(((100vw / 3) / 3) / 3);
+    display: block;
+    margin: 20px auto 20px;
+  }
+  .selectDifficultyOptions option {
+    font-size: 18px;
+  }
+  .playButtonContainer {
+    margin: 0 auto;
+    display: block;
+    width: calc(100vw / 1.5);
+  }
+  .quote {
+    font-size: calc(((100vw / 3) / 3) / 3.5);
+  }
+
+  #lottie {
+    margin: calc(20vh / 1.5) 0 calc(20vh / 4) 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nameTextBoxText {
+    font-size: calc(((100vw / 3) / 3) / 3);
+    width: calc((100vw / 3) / 1.5);
+  }
+  .nameTextbox {
+    font-size: calc(((100vw / 3) / 3) / 2.7);
+    width: calc(100vw / 1.5);
+  }
+  .GameButtons {
+    width: calc((100vw / 3) / 1.5);
+    font-size: calc(((100vw / 3) / 3) / 2.7);
+    display: block;
+    margin: 20px auto 20px;
+    width: 100%;
+  }
+  .selectDifficultyOptions {
+    width: calc((100vw / 3) / 1.5);
+    font-size: calc(((100vw / 3) / 3) / 2.7);
+    display: block;
+    margin: 20px auto 20px;
+  }
+  .nameTextbox::placeholder {
+    font-size: calc(((100vw / 3) / 3) / 4);
+  }
+  .selectDifficultyOptions option {
+    font-size: 18px;
+  }
+  .playButtonContainer {
+    margin: 0 auto;
+    display: block;
+    width: calc(100vw / 1.5);
+  }
+}
+
+.creator {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 15px;
+  color: white;
+}
+
+@media screen and (max-height: 600px) {
+  #lottie {
+    margin: calc(20vh / 2) 0 calc(20vh / 4) 0;
+  }
+
+  .textBoxContainer {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #lottie {
+    margin: calc(20vh / 1.5) 0 calc(20vh / 4) 0;
+  }
+
+  .nameTextBoxText {
+    line-height: 55px;
+    font-size: calc(((100vw / 3) / 3) / 4);
+    height: calc(20vh / 3);
+    line-height: calc(20vh / 3);
+  }
+
+  .nameTextbox {
+    line-height: 55px;
+    font-size: calc(((100vw / 3) / 3) / 4);
+    height: calc(20vh / 3);
+  }
+
+  .GameButtons {
+    font-size: calc(((100vw / 3) / 3) / 3);
+    height: calc(20vh / 3);
+  }
+
+  .selectDifficultyOptions {
+    font-size: calc(((100vw / 3) / 3) / 3);
+    height: calc(20vh / 3);
+  }
+}

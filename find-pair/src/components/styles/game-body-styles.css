@@ -1,0 +1,271 @@
+* {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+#container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #c8d6e5;
+}
+
+.afterGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(38, 12, 12, 0.8);
+  z-index: -1;
+
+  animation: afterGameAnimation 1s ease-in forwards;
+}
+
+.afterGameDetailsContainer {
+  padding: 45px;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  text-align: center;
+  background-color: burlywood;
+  font-size: calc(20vh / 6);
+  border-radius: 10px;
+}
+
+.congrats {
+  font-size: calc(20vh / 5);
+}
+
+.checkLeaderboardButton {
+  border: none;
+  background-color: #2d3436;
+  transition: all 0.5s;
+}
+
+.checkLeaderboardButton:hover {
+  background-color: #c44569;
+}
+
+.restartButton {
+  border: none;
+  background-color: #2d3436;
+  transition: all 0.5s;
+}
+
+.restartButton:hover {
+  background-color: #00b894;
+}
+
+.goBackButton {
+  transition: all 0.5s;
+  border: none;
+  background-color: #2d3436;
+}
+
+.goBackButton:hover {
+  background-color: #d63031;
+}
+
+.rateTheGameContainer {
+  font-size: calc(20vh / 5);
+  margin: 15px 0 0px;
+}
+
+.ratingStars {
+  color: #2d3436;
+  margin: 15px 2px 0;
+  font-size: 40px;
+  z-index: 100000000;
+  transition: all 0.1s ease-in;
+}
+
+.ratingStars:hover {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+@keyframes afterGameAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.brandLogo {
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  animation: appear 2s cubic-bezier(0.76, -0.04, 0.43, 1) 0.3s forwards;
+}
+
+.logo {
+  font-size: 50px;
+  transition: all ease-in 0.5s;
+  float: left;
+}
+.brandLogo:hover .logo {
+  color: #c8d6e5;
+  text-shadow: 1px 1px #2f3640;
+  transform: translateY(1px);
+}
+
+.logoText {
+  bottom: 10px;
+  font-size: 25px;
+  float: left;
+  line-height: 50px;
+  margin: 0 0 0 10px;
+  transition: all ease-in 0.5s;
+}
+
+.brandLogo:hover .logoText {
+  color: #c8d6e5;
+  text-shadow: 1px 1px #2f3640;
+  transform: translateY(1px);
+}
+
+/* .menuContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d35400;
+  z-index: 100000;
+} */
+
+#canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.timerContianer {
+  margin: 5px 0 0 15px;
+}
+.timeCounter {
+  font-size: 35px;
+}
+.timeCounterColon {
+  font-size: 30px;
+}
+
+.clicksContainer {
+  margin-left: 15px;
+}
+
+.clicksCounterColon {
+  font-size: 30px;
+  margin-left: 45px;
+}
+/* 
+size of 4X4
+height: calc(20vh);
+  width: calc(18vw);
+*/
+
+.box4 {
+  height: calc(18vh);
+  width: calc(14vw);
+  background-color: #222f3e;
+  border: 1px solid #687585;
+  transition: all 0.2s cubic-bezier(0.74, 0.16, 0.31, 0.9);
+}
+
+.box6 {
+  height: calc(13vh);
+  width: calc(10vw);
+  background-color: #222f3e;
+  border: 1px solid #687585;
+  transition: all 0.2s cubic-bezier(0.74, 0.16, 0.31, 0.9);
+}
+
+.box:hover {
+  background-color: #c8d6e5;
+}
+
+.box6:hover {
+  background-color: #c8d6e5;
+}
+
+.fix-lines {
+  float: left;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.endGame {
+  z-index: 10000;
+}
+
+.creator {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 15px;
+  color: white;
+}
+
+@media screen and (min-width: 1000px) {
+  .box4 {
+    height: calc(18vh);
+    width: calc(10vw);
+  }
+  .box6 {
+    height: calc(12vh);
+    width: calc(8vw);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .box4 {
+    height: calc(21vh);
+    width: calc(25vw);
+  }
+  .box6 {
+    height: calc(13h);
+    width: calc(16.6vw);
+  }
+  .creator {
+    display: none;
+  }
+  .afterGameDetailsContainer {
+    padding: 25px;
+    font-size: calc(20vh / 7);
+  }
+  .congrats {
+    font-size: calc(20vh / 6);
+  }
+  .rateTheGameContainer {
+    font-size: calc(20vh / 6);
+    margin: 20px 0 0px;
+  }
+  .ratingStars {
+    margin: 10px 2px 0;
+    font-size: 35px;
+  }
+  .restartButton,
+  .checkLeaderboardButton,
+  .goBackButton {
+    margin-bottom: 10px;
+  }
+}
