@@ -5,9 +5,8 @@ require("babel-polyfill");
 
 module.exports = {
   entry: ["babel-polyfill", "./src/main.js"],
-  mode: "production",
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "../dist"),
     publicPath: "/dist/",
     filename: "build.js"
   },
