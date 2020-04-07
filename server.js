@@ -14,6 +14,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+// app.use(
+//   express.static(__dirname + "./find-pair/dist/" || __dirname + "/dist/")
+// );
+
+// app.get(/.*/, function (req, res) {
+//   res.sendFile(
+//     __dirname + "./find-pair/dist/index.html" || __dirname + "/dist/index.html"
+//   );
+// });
 app.use("/api/data", dataRoutes);
 app.use(compression());
 const port = process.env.PORT;
