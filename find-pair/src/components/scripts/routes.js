@@ -2,7 +2,7 @@ import axios from "axios";
 
 const addUserData = async dataObject => {
   try {
-    const res = await axios.post("/api/data/addData", dataObject);
+    const res = await axios.post(`/api/data/addData`, dataObject);
     return res;
   } catch (err) {
     console.log(err);

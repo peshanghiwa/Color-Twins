@@ -4,6 +4,7 @@ const cors = require("cors");
 const dataRoutes = require("./routes/dataRoutes");
 const env = require("dotenv");
 const mongoose = require("mongoose");
+const compression = require("compression");
 
 env.config({
   path: "./.env",
@@ -14,8 +15,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/api/data", dataRoutes);
+app.use(compression());
+const port = process.env.PORT;
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server connected succefully!");
 });
 
