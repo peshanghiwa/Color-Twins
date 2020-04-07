@@ -6,7 +6,7 @@ const env = require("dotenv");
 const mongoose = require("mongoose");
 
 env.config({
-  path: "./config.env"
+  path: "./.env",
 });
 const app = express();
 
@@ -24,7 +24,7 @@ mongoose
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("Databse Connection Succefull!");
