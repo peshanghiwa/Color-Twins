@@ -40,7 +40,6 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "scripts": {
-    "postinstall": "ng build",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
