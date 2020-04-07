@@ -151,7 +151,7 @@ export default {
     },
     async addData(dataObject) {
       try {
-        const res = await axios.post("/api/data/addData", dataObject);
+        const res = await axios.post("api/data/addData", dataObject);
         return res;
       } catch (err) {
         console.log(err);

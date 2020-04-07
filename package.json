@@ -23,6 +23,7 @@
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.6",
     "nodemon": "^2.0.2",
+    "postinstall": "^0.7.0",
     "timerjs": "0.0.1",
     "tocktimer": "^1.0.12",
     "vue-cli": "^2.9.6",
@@ -39,6 +40,7 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "scripts": {
+    "postinstall": "ng build",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
